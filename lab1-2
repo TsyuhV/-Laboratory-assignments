@@ -1,0 +1,9 @@
+#Solving the problem
+#Variant 16 Tsyuh Vladyslav
+amoeb = 1
+print("Hours", " ", "Amoeba")
+
+for i in range(2, 49, 2):
+    amoeb *= 3
+    if (i % 12 == 0):
+        print(i, " " * 4, amoeb)

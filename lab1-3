@@ -1,0 +1,15 @@
+#Solving the problem
+#Variant 16 Tsyuh Vladyslav
+N = int(input("Enter N in range (1 < N < 9): " ))
+while N < 2 or N > 8:
+    N = int(input("Wrong option! The range is (2 <= N <= 8). Try again: "))
+
+for i in range(1, N + 1):
+    num = 1
+    for j in range(N, 0, -1):
+        if j > i:
+            print(" ", end = " ")
+        else:
+            print(num, end = " ")
+            num += 1
+    print("")

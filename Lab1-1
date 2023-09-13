@@ -1,0 +1,17 @@
+#Solving the problem
+#Variant 16 Tsyuh Vladyslav
+a = int(input("Enter number for a in range(1 - 100): "))    #First
+while(a <= 0 or a > 100):
+    a = int(input("Wrong option! The range for it is 1 - 100. Try again: "))
+b = int(input("Enter number for b in range(1 - 100): "))    #Second
+while(b <= 0 or b > 100):
+    b = int(input("Wrong option! The range for it is 1 - 100. Try again: "))
+#Conditions
+if a < b:
+    X = b / a - 1
+elif a == b:
+    X = -295
+else:
+    X = (a - 235) / b
+#Result
+print("The result is: ", X)

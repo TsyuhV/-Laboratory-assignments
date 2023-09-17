@@ -1,0 +1,37 @@
+def expression(m):
+  z = (m**0.5) + 10
+  return z
+
+
+def middle_ar(x, y):
+  total = 0
+  count = 0
+
+  for number in range(x, y + 1):
+    if number % 2 == 0:
+      total += number
+      count += 1
+
+  if count == 0:
+    return "У заданому діапазоні немає парних чисел"
+  else:
+    average = total / count
+    return average
+
+
+m = float(input("Введіть значення m: "))
+while m < 0:
+  print("Значення 'm' не може бути від'ємним числом!")
+  m = float(input("Введіть повторно значення m: "))
+print("Значення виразу z = ", expression(m))
+
+x = int(input("Введіть від якого числа (х) знаходити середнє арифметичне: "))
+y = int(input("Введіть до якого числа (y) знаходити середнє арифметичне: "))
+
+while x > y:
+  x = int(
+      input(
+          "у не може бути менше х, введіть ще раз від якого числа (х) знаходити середнє арифметичне: "
+      ))
+  y = int(input("Введіть до якого числа (y) знаходити середнє арифметичне: "))
+print("Середнє арифметичне парних чисел від х до у = ", middle_ar(x, y))
